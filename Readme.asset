@@ -1,34 +1,17 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcf7219bab7fe46a1ad266029b2fee19, type: 3}
-  m_Name: Readme
-  m_EditorClassIdentifier: 
-  icon: {fileID: 2800000, guid: 727a75301c3d24613a3ebcec4a24c2c8, type: 3}
-  title: URP Empty Template
-  sections:
-  - heading: Welcome to the Universal Render Pipeline
-    text: This template includes the settings and assets you need to start creating with the Universal Render Pipeline.
-    linkText: 
-    url:
-  - heading: URP Documentation
-    text:
-    linkText: Read more about URP
-    url: https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@latest
-  - heading: Forums
-    text:
-    linkText: Get answers and support
-    url: https://forum.unity.com/forums/universal-render-pipeline.383/
-  - heading: Report bugs
-    text:
-    linkText: Submit a report
-    url: https://unity3d.com/unity/qa/bug-reporting
-  loadedLayout: 1
+https://github.com/960129eric-ops/1151VR-HW5-414262636-ChienHungAn
+https://youtu.be/scEksNVzGMI
+
+怎麼做的
+角色移動：用 TrainerController.cs 讀取鍵盤（WASD／方向鍵）或滑動輸入來移動與轉向，Active Input Handling 設為 Both。
+丟球收服：在角色底下建空物件 ThrowPoint 當發射點；把寶貝球模型加 Rigidbody、Sphere Collider 與 PokeballCapture 腳本存成 Prefab，並刪掉原本放場景裡會垂直往下掉的那顆。按空白鍵或快速雙擊就會生出球往前往下斜飛，撞到 Tag 為 Pokemon 的寶可夢觸發收服（特效先不接也行）。
+相機跟隨：用 CameraFollow.cs 掛在 Camera 上，在 LateUpdate() 跟著目標位置與朝向，並移除會干擾鏡頭的元件（如多餘的 Timeline／遺失腳本）。
+上傳 GitHub：加上 Unity .gitignore 排除暫存檔，並處理單檔超過 100 MB 的大檔（刪掉/換小檔或用 Git LFS）。
+怎麼操作
+測試玩法（Play 模式）
+點一下 Game 視窗，按 WASD 走動，按 空白鍵 或快速連點兩下滑鼠左鍵丟球。
+鏡頭角度不順就調 CameraFollow 的 Offset（Y 調高低、Z 調遠近）和 Look At Height（調看高看低）。
+上傳 GitHub
+專案放好 Unity .gitignore。
+查出超過 100 MB 的檔案，移除／替換掉，或改用 Git LFS 追蹤大檔。
+確認沒有把大檔留在 commit 裡後，再 add、commit、push 上去。
+可用電腦以及手機遊玩
